@@ -1,0 +1,107 @@
+*{
+  box-sizing: border-box;  
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+@font-face {
+	font-family: 'GothaPro';
+	src: url('./fonts/GothaProBol.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothaPro';
+	src: url('./fonts/GothaProLig.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothaPro';
+	src: url('./fonts/GothaProLigIta.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-image: url(img/background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logotype__picture {
+  display: inline-block;
+  margin-bottom: 30px;
+  animation-name: move;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  0%{
+    transform: rotate(0deg) scale(1);
+  }
+
+  25%{
+    transform: rotate(-15deg) scale(.8);
+  }
+
+  50%{
+    transform: rotate(0deg) scale(1);
+  }
+
+  75%{
+    transform: rotate(15deg) scale(.8);
+  }
+
+  100%{
+    transform: rotate(0deg) scale(1);
+  }
+  
+}
+
+.button {
+  outline: none;
+  border: 3px solid #ec1e79;
+  background-color: transparent;
+  color: #ec1e79;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.button:hover {
+  background-color: #ec1e79;
+  color: #ffffff;
+}
